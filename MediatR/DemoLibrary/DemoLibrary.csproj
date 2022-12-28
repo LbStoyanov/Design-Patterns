@@ -6,4 +6,16 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="MediatR" Version="11.1.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MediatR Intro\MediatR Intro.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Models\Queries\" />
+  </ItemGroup>
+
 </Project>
