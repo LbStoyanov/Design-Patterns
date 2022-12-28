@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace DemoLibrary.DataAccess
 {
-    public class DemoDataAccess
+    public class DemoDataAccess : IDataAccess
     {
         private List<PersonalModel> people = new();
 
@@ -24,7 +24,7 @@ namespace DemoLibrary.DataAccess
 
         public PersonalModel InsertPerson(string firstName, string lastName)
         {
-            PersonalModel personalModel = new() { FirstName = firstName, LastName = lastName};
+            PersonalModel personalModel = new() { FirstName = firstName, LastName = lastName };
             personalModel.Id = people.Max(x => x.Id) + 1;
             people.Add(personalModel);
             return personalModel;
