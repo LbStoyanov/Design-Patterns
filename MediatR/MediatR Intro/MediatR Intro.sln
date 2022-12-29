@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33122.133
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MediatR Intro", "MediatR Intro.csproj", "{7E6BE265-7445-4749-B7BB-0459C9BDE8BD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MediatR Intro", "MediatR Intro.csproj", "{7E6BE265-7445-4749-B7BB-0459C9BDE8BD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DemoLibrary", "..\DemoLibrary\DemoLibrary.csproj", "{6454C368-2A0F-475A-AE32-B50FB4286369}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DemoLibrary", "..\DemoLibrary\DemoLibrary.csproj", "{6454C368-2A0F-475A-AE32-B50FB4286369}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MediatRApi", "..\MediatRApi\MediatRApi.csproj", "{F10E26C5-62A7-4EE1-95EB-8B945E612729}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{6454C368-2A0F-475A-AE32-B50FB4286369}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6454C368-2A0F-475A-AE32-B50FB4286369}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6454C368-2A0F-475A-AE32-B50FB4286369}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F10E26C5-62A7-4EE1-95EB-8B945E612729}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F10E26C5-62A7-4EE1-95EB-8B945E612729}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F10E26C5-62A7-4EE1-95EB-8B945E612729}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F10E26C5-62A7-4EE1-95EB-8B945E612729}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
