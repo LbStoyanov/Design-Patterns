@@ -1,4 +1,5 @@
-﻿using DemoLibrary.Models;
+﻿using DemoLibrary.Commands;
+using DemoLibrary.Models;
 using DemoLibrary.Models.Queries;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
@@ -18,7 +19,7 @@ namespace MediatRApi.Controllers
         }
 
         [HttpGet]
-        public async Task<List<PersonalModel>> Get()
+        public async Task<List<PersonModel>> Get()
         {
             //We do not think about the implementation for this method in our UI.Mediator JUST CALL THIS QUERY!!!
             return await _mediator.Send(new GetPersonListQuery());
@@ -26,15 +27,18 @@ namespace MediatRApi.Controllers
 
         
         [HttpGet("{id}")]
-        public async Task<PersonalModel> Get(int id)
+        public async Task<PersonModel> Get(int id)
         {
             return await _mediator.Send(new GetPersonByIdQuery(id));
         }
 
         
         [HttpPost]
-        public void Post([FromBody] string value)
+        public async Task<PersonModel> Post([FromBody] PersonModel value)
         {
+            var model = new InsertPersonCommand(value.FirstName, value.LastName);
+
+            return await _mediator.Send(model);
         }
 
     }

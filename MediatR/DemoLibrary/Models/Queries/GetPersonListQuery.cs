@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace DemoLibrary.Models.Queries
 {
     //record approach, just has additional syntax
-    public record GetPersonListQuery() : IRequest<List<PersonalModel>>;
+    public record GetPersonListQuery() : IRequest<List<PersonModel>>;
 
     //class approach
     //public record GetPersonListQuery : IRequest<List<PersonalModel>>

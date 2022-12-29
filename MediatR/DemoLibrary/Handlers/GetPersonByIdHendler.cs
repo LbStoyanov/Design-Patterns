@@ -10,7 +10,7 @@ using MediatR;
 
 namespace DemoLibrary.Handlers
 {
-    public class GetPersonByIdHendler : IRequestHandler<GetPersonByIdQuery, PersonalModel>
+    public class GetPersonByIdHendler : IRequestHandler<GetPersonByIdQuery, PersonModel>
     {
         private readonly IMediator _mediator;
 
@@ -18,7 +18,7 @@ namespace DemoLibrary.Handlers
         {
             _mediator = mediator;
         }
-        public async Task<PersonalModel> Handle(GetPersonByIdQuery request, CancellationToken cancellationToken)
+        public async Task<PersonModel> Handle(GetPersonByIdQuery request, CancellationToken cancellationToken)
         {
             var results = await _mediator.Send(new GetPersonListQuery());
 

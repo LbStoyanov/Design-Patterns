@@ -9,22 +9,22 @@ namespace DemoLibrary.DataAccess
 {
     public class DemoDataAccess : IDataAccess
     {
-        private List<PersonalModel> people = new();
+        private List<PersonModel> people = new();
 
         public DemoDataAccess()
         {
-            people.Add(new PersonalModel { Id = 1, FirstName = "Petrankin", LastName = "Ginkov" });
-            people.Add(new PersonalModel { Id = 2, FirstName = "4i4o", LastName = "Koleda" });
+            people.Add(new PersonModel { Id = 1, FirstName = "Petrankin", LastName = "Ginkov" });
+            people.Add(new PersonModel { Id = 2, FirstName = "4i4o", LastName = "Koleda" });
         }
 
-        public List<PersonalModel> GetPeople()
+        public List<PersonModel> GetPeople()
         {
             return people;
         }
 
-        public PersonalModel InsertPerson(string firstName, string lastName)
+        public PersonModel InsertPerson(string firstName, string lastName)
         {
-            PersonalModel personalModel = new() { FirstName = firstName, LastName = lastName };
+            PersonModel personalModel = new() { FirstName = firstName, LastName = lastName };
             personalModel.Id = people.Max(x => x.Id) + 1;
             people.Add(personalModel);
             return personalModel;

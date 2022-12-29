@@ -10,14 +10,14 @@ using System.Threading.Tasks;
 
 namespace DemoLibrary.Handlers
 {
-    public class GetPersonListHendler : IRequestHandler<GetPersonListQuery, List<PersonalModel>>
+    public class GetPersonListHendler : IRequestHandler<GetPersonListQuery, List<PersonModel>>
     {
         private readonly IDataAccess _data;
         public GetPersonListHendler(IDataAccess data)
         {
             _data= data;
         }
-        public Task<List<PersonalModel>> Handle(GetPersonListQuery request, CancellationToken cancellationToken)
+        public Task<List<PersonModel>> Handle(GetPersonListQuery request, CancellationToken cancellationToken)
         {
             return Task.FromResult(_data.GetPeople());
         }

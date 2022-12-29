@@ -8,7 +8,7 @@ using MediatR;
 namespace DemoLibrary.Models.Queries
 {
     //Shorter syntax
-    public record GetPersonByIdQuery(int Id) : IRequest<PersonalModel>;
+    public record GetPersonByIdQuery(int Id) : IRequest<PersonModel>;
 
     //Class approach
 

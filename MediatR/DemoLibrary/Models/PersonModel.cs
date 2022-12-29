@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DemoLibrary.Models
 {
-    public class PersonalModel
+    public class PersonModel
     {
         public int Id { get; set; }
         public string FirstName { get; set; }
