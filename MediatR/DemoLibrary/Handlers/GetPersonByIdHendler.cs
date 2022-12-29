@@ -21,6 +21,7 @@ namespace DemoLibrary.Handlers
         public async Task<PersonalModel> Handle(GetPersonByIdQuery request, CancellationToken cancellationToken)
         {
             var results = await _mediator.Send(new GetPersonListQuery());
+
             var output = results.FirstOrDefault(x => x.Id == request.Id);
 
             return output;

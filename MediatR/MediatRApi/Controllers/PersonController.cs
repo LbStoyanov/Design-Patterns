@@ -26,9 +26,9 @@ namespace MediatRApi.Controllers
 
         
         [HttpGet("{id}")]
-        public string Get(int id)
+        public async Task<PersonalModel> Get(int id)
         {
-            return "value";
+            return await _mediator.Send(new GetPersonByIdQuery(id));
         }
 
         
