@@ -1,3 +1,4 @@
+using DemoLibrary;
 using DemoLibrary.DataAccess;
 using MediatR;
 using MediatR_Intro.Data;
@@ -11,7 +12,7 @@ builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
 builder.Services.AddSingleton<WeatherForecastService>();
 builder.Services.AddSingleton<IDataAccess,DemoDataAccess>();
-builder.Services.AddMediatR(typeof(DemoDataAccess).Assembly);
+builder.Services.AddMediatR(typeof(DemoLibraryMediatREntryPoint).Assembly);
 
 var app = builder.Build();
 
