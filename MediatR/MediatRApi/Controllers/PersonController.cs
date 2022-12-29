@@ -3,6 +3,7 @@ using DemoLibrary.Models;
 using DemoLibrary.Models.Queries;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
+// ReSharper disable All
 
 
 namespace MediatRApi.Controllers
