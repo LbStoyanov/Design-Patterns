@@ -4,6 +4,7 @@
     {
 
     }
+    //Instead of having this we can make another interface
     public interface IMachine
     {
         void Print(Document document);
@@ -11,6 +12,29 @@
         void Fax(Document document);
         
     }
+
+    public interface IMultiFunctionDevice : IScanner, IPrinter //...more interfaces
+    {
+        public void Fax(Document document);
+    }
+    public class MultiFunctionMachine : IMultiFunctionDevice
+    {
+        public void Fax(Document document)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Print(Document document)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Scann(Document document)
+        {
+            throw new NotImplementedException();
+        }
+    }
+
     public class OldFashionPrinter
     {
         //This printer must not implement actions, which cannot execute!!!!!
